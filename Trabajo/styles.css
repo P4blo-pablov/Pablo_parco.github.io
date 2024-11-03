@@ -1,0 +1,53 @@
+*{
+    /*tipo de letra*/
+    font-family: 'Share tech Mono', monospace;
+}
+
+#board, .boardInfo {
+    /*ancho maximo para no salirse*/
+    max-width: 500px;
+}
+#board{
+    display: grid;
+    /*repite los diez elementos en un valor de 1 en cada de esas columnas*/
+    grid-template-columns: repeat(10, 1fr);
+}
+#start, .boardInfo{
+    font-size: 25px;
+}
+#gameOver{
+    /*aparece cuando se pierda*/
+    display: none;
+}
+.boardInfo{
+    /*no ayuda a separar uno a la iz y el otro der*/
+    display: flex;
+    justify-content: space-between;
+    /*usamos margin para separar del tablero o del margen*/
+    margin-top: 10px;
+}
+#start{
+    background-color: #f35a69;
+    border: none;
+    color:white;
+}
+#scoreBoard{
+    display: inline-flex;
+}
+/*cada uno de los cuadrados*/
+.square{
+    aspect-ratio: 1;
+}
+/*estilos de cada tipo de cuadrado*/
+/*cuadrados vacios*/
+.emptySquare{
+    background-color: #4569;
+}
+/*serpiente*/
+.sankeSquare{
+    background-color: #9bd135;
+}
+/*comida serpiente*/
+.foodSquare{
+    background-color: red;
+}
